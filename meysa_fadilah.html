@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #a778a0;
+            --secondary: #e98cc4;
+            --accent: #48032c;
+            --light-bg: #f9f0f8;
+            --text: #333;
+            --white: #fff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f5f5, #f0d7ed);
+            color: var(--text);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--white);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin: 0 auto 20px;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-pic:hover {
+            transform: scale(1.05);
+        }
+        
+        h1 {
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+        
+        header p {
+            color: var(--secondary);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        section {
+            margin-bottom: 30px;
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        h2 {
+            color: var(--accent);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2 i {
+            margin-right: 10px;
+            color: var(--primary);
+        }
+        
+        .biodata p, .portfolio p {
+            margin-left: 10px;
+            margin-bottom: 12px;
+            display: flex;
+        }
+        
+        .biodata p strong, .portfolio p strong {
+            min-width: 150px;
+            display: inline-block;
+            color: var(--primary);
+        }
+        
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skills li {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            margin: 0;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .sosial-media {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .sosial-media a {
+            display: flex;
+            align-items: center;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background: rgba(168, 120, 160, 0.1);
+        }
+        
+        .sosial-media a:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+        
+        .sosial-media i {
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+        
+        .portfolio-item {
+            background: var(--white);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid var(--primary);
+            transition: transform 0.3s ease;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 25px;
+            }
+            
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .biodata p {
+                flex-direction: column;
+            }
+            
+            .biodata p strong {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Replace with your actual image path -->
+            <img src="picture/1.jpg" alt="Profile Picture" class="profile-pic">
+            <h1>Meysa Fadilah</h1>
+            <p>2309010168 | Sistem Informasi</p>
+        </header>
+        
+        <section class="biodata">
+            <h2><i class="fas fa-user"></i> Biodata</h2>
+            <p><strong>Nama Lengkap:</strong> Meysa Fadilah</p>
+            <p><strong>Tempat/Tanggal Lahir:</strong> Tebing tinggi/24-01-2005</p>
+            <p><strong>Alamat:</strong> Jl. Ampera 6 no.30</p>
+            <p><strong>No. HP:</strong> 081366500303</p>
+            
+            <div class="sosial-media">
+                <a href="https://instagram.com/meyyshafa" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://tiktok.com/@meyyshafa" target="_blank">
+                    <i class="fab fa-tiktok"></i> Tiktok
+                </a>
+            </div>
+        </section>
+        
+        <section class="skills">
+            <h2><i class="fas fa-code"></i> Skills</h2>
+            <ul>
+                <li>Java</li>
+                <li>Python</li>
+                <li>HTML/CSS</li>
+                <li>Database</li>
+            </ul>
+        </section>
+        
+        <section class="portfolio">
+            <h2><i class="fas fa-briefcase"></i> Portfolio</h2>
+            <p>Berikut beberapa proyek yang telah saya kerjakan:</p>
+            
+            <div class="portfolio-item">
+                <strong>Database Kasir</strong>
+                <p>Sistem database untuk manajemen transaksi kasir</p>
+            </div>
+            
+            <div class="portfolio-item">
+                <strong>Website Menu Cafe</strong>
+                <p>Website pemesanan menu untuk cafe</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
